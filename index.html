@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h2 class="title">PASSWORD GENERATOR</h2>
+        <div class="display-container">
+            <input type="text" name="password" id="display" placeholder="PASSWORD" readonly>
+            <i class="fa-regular fa-copy"></i>
+        </div>
+        <div class="container">
+            <div class="length">
+                <p>Password Length</p>
+                <p class="count">6</p>
+            </div>
+            <form id="form-submit">
+                <div class="slider-parent">
+                    <span class="bar"><span class="fill"></span></span>
+                    <input type="range" name="range" value="6" id="slider" min="0" max="12">
+                </div>
+                <label>
+                    <input type="checkbox" name="uppercase" id="capital">
+                    <span></span>
+                    <p>Includes Uppercase letters</p>
+
+                </label>
+                <label>
+                    <input type="checkbox" name="lowercase" id="small">
+                    <span></span>
+                    <p>Includes Lowercase letters</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="numbers" id="num">
+                    <span></span>
+                    <p>Includes Numbers</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="symbols" id="symbol">
+                    <span></span>
+                    <p>Includes Symbols</p>
+                </label>
+                <input type="submit" id="btn" value="GENERATE PASSWORD">
+
+            </form>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

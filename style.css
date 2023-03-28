@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, #530a77, #1e0c33);
+}
+
+.title {
+    color: rgba(255, 255, 255, 0.676);
+    /* text-shadow: 0 0 1px rgb(17, 184, 196); */
+    margin-bottom: 1.8rem;
+    text-align: center;
+}
+
+#display {
+    border: none;
+    outline: none;
+    width: 19rem;
+    padding: 0.725rem 1rem;
+    background-color: #1606289c;
+    color: #fbbc1c;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    box-shadow: 0 3px 4px #820bbe;
+    margin-bottom: 1.8rem;
+
+    transform: translateX(1rem);
+}
+
+.length {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.count {
+    color: yellow;
+}
+
+#form-submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.9rem;
+    color: aliceblue;
+    font-size: 1.1rem;
+}
+
+.container {
+    background-color: #1606289c;
+    padding: 2rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 0 4px 2px yellow;
+}
+
+#btn {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    text-align: center;
+    background-color: #bc15f4;
+    padding: 0.6rem 0;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    margin: 0.9rem 0;
+    cursor: pointer;
+    outline: 2px solid yellow;
+    outline-offset: 3px;
+
+}
+
+#btn:hover {
+    transition: all 0.3s linear;
+    opacity: 0.7;
+}
+
+.checkbox {
+    display: no;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+label span {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    /* background-color: white; */
+    border: 2px solid rgb(16, 207, 217);
+    border-radius: 6px;
+    box-shadow: 0 0 2px 1px rgb(16, 207, 217);
+    cursor: pointer;
+}
+
+label span::after {
+    content: '';
+    position: absolute;
+    left: 8px;
+    bottom: 4px;
+    width: 0;
+    height: 0;
+    border: solid #00ff0a;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked~span::after {
+    transition: all 0.4s ease-in-out;
+    width: 8px;
+    height: 18px;
+    opacity: 1;
+}
+
+.slider-parent {
+    width: 100%;
+    position: relative;
+    margin-bottom: 0.8rem;
+}
+
+.slider-parent .bar {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(215, 215, 57, 0.623);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+#slider {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    outline: none;
+    border-radius: 3px;
+    background-color: transparent;
+    /* border: none; */
+}
+
+#slider::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(243, 243, 4);
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    z-index: 7;
+    transition: 0.3s ease-in-out;
+}
+
+#slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 7px rgba(250, 250, 2, 0.313);
+}
+
+#slider:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 12px rgba(250, 250, 2, 0.313);
+}
+.display-container{
+    position: relative;
+    /* display: inline-block; */
+}
+.fa-copy{
+    color: #fff;
+    position: absolute;
+    right: 2rem;
+   top: 10px;
+   font-size: 18px;
+   cursor: pointer;
+}
+.fa-copy::after{
+
+    content: 'copied';
+    position: absolute;
+    top: -1.8rem;
+    /* left: 0; */
+    /* right: -8px; */
+    right: -1rem;
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+}
+.display-container .fa-copy:active::after{
+   
+    opacity: 1;
+}
+#display::selection{
+    background: none;
+}
